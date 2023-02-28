@@ -19,13 +19,11 @@ client.on('messageCreate', msg => {
   console.log(commandBody)
   console.log(args)
   console.log(command)
-  
+
   if(command === 'ping'){
     const timeTaken = Date.now() - msg.createdTimestamp;
     msg.reply('pong! Latency ' + timeTaken)
   }
-
-
 
 })
 
