@@ -1,6 +1,17 @@
 require('dotenv').config();
+const express = require('express')
+const app = express()
+
 const Discord = require('discord.js')
 const client = new Discord.Client({ intents: ["Guilds", "GuildMessages", "DirectMessages", "MessageContent"] });
+
+const port = process.env.PORT || 3000
+
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`)
+})
+
 
 client.once('ready', () => {
   console.log('bot is on')
